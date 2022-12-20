@@ -13,8 +13,6 @@ struct RecipeListView: View {
     
     var body: some View {
         
-        
-        
         NavigationView {
             List(model.recipes) { r in
                 
@@ -32,6 +30,7 @@ struct RecipeListView: View {
                     }
                 }
             }
+            .navigationBarTitle("All Recipes")
         }
     }
 }
