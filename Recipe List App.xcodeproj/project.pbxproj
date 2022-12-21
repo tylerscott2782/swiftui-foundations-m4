@@ -17,6 +17,7 @@
 		99A6D451295015370073DC2B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A6D450295015370073DC2B /* DataService.swift */; };
 		99A6D46D2950EF4E0073DC2B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A6D46C2950EF4E0073DC2B /* RecipeDetailView.swift */; };
 		99E45F9129523DCD009EAD48 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E45F9029523DCD009EAD48 /* RecipeTabView.swift */; };
+		99E45FE12952EBCB009EAD48 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E45FE02952EBCB009EAD48 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		99A6D450295015370073DC2B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		99A6D46C2950EF4E0073DC2B /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		99E45F9029523DCD009EAD48 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
+		99E45FE02952EBCB009EAD48 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				99A6D44C295012BE0073DC2B /* Recipe.swift */,
+				99E45FE02952EBCB009EAD48 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				99A6D44F295013D90073DC2B /* RecipeModel.swift in Sources */,
 				99A6D43829500F8E0073DC2B /* RecipeListView.swift in Sources */,
 				99A6D4492950117A0073DC2B /* Recipe_List_App.swift in Sources */,
+				99E45FE12952EBCB009EAD48 /* Ingredient.swift in Sources */,
 				99A6D46D2950EF4E0073DC2B /* RecipeDetailView.swift in Sources */,
 				99A6D451295015370073DC2B /* DataService.swift in Sources */,
 				99E45F9129523DCD009EAD48 /* RecipeTabView.swift in Sources */,
