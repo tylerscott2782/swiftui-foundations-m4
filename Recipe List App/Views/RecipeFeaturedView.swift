@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeFeaturedView: View {
     @EnvironmentObject var model:RecipeModel
+    @State var isDetailViewShowing = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -25,20 +26,29 @@ struct RecipeFeaturedView: View {
                         
                         //Only show those that should be featured
                         if model.recipes[index].featured {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                VStack(spacing: 0) {
-                                    Image(model.recipes[index].image)
-                                        .resizable()
-                                        .clipped()
-                                        .aspectRatio(contentMode: .fill)
-                                    Text(model.recipes[index].name)
-                                        .padding(5)
+                            Button {
+                                self.isDetailViewShowing = true
+                            } label: {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.white)
+                                    VStack(spacing: 0) {
+                                        Image(model.recipes[index].image)
+                                            .resizable()
+                                            .clipped()
+                                            .aspectRatio(contentMode: .fill)
+                                        Text(model.recipes[index].name)
+                                            .padding(5)
+                                            .foregroundColor(.black)
+                                    }
                                 }
-                            }.frame(width: ge.size.width-40, height: ge.size.height-100)
-                                .cornerRadius(15)
-                                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
+                            }
+                            .sheet(isPresented: $isDetailViewShowing) {
+                                RecipeDetailView(recipe: model.recipes[index])
+                            }
+                            .frame(width: ge.size.width-40, height: ge.size.height-100)
+                            .cornerRadius(15)
+                            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
                         }
                     }
                 }
@@ -50,7 +60,7 @@ struct RecipeFeaturedView: View {
                 Text("Preparation Time: ")
                     .font(.headline)
                 Text("1 hour")
-                Text("Highlights")
+                Text("Highlights: ")
                     .font(.headline)
                 Text("Healthy, Hearty")
             }
